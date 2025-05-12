@@ -12,9 +12,6 @@ services:
     volumes:
       - .:/app
     restart: always
-    # Add host entry for the db service
-    extra_hosts:
-      - "db:172.17.0.1"
 
   db:
     image: postgres:17
