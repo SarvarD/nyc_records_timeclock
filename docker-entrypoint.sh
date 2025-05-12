@@ -10,7 +10,7 @@ ip addr show
 
 # Wait for database to be ready (with timeout)
 echo "Waiting for PostgreSQL..."
-max_attempts=30
+max_attempts=5
 attempt=0
 
 # Check if we can ping the database
