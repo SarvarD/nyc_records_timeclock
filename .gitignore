@@ -1,7 +1,7 @@
 __pycache__/
 LogFile
 *.pyc
-*.log
+**.log**
 log/
 .idea/*
 venv/*
@@ -12,4 +12,3 @@ LogFile*
 docs/_build/*
 .env*
 !.env.example
-**.log**
