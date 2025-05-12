@@ -42,4 +42,5 @@ EXPOSE 5000
 
 # Run entrypoint and command
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["flask", "run", "--host=0.0.0.0", "--port=5000", "--reload"] # Allow hot-reloading with debugger enabled
+# Allow hot-reloading with debugger enabled
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000", "--reload"] 

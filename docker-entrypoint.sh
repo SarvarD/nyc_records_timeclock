@@ -44,13 +44,13 @@ python -c "from app import create_app, db; app = create_app('development'); app.
 
 # Set up initial database
 echo "Setting up initial database data..."
-FLASK_APP=timeclock.py python -m flask setup_db || echo "Database setup failed, but continuing..."
+python -m flask setup_db || echo "Database setup failed, but continuing..."
 
 # Create dev users if in development mode
 if [ "$FLASK_ENV" = "development" ] || [ "$FLASK_CONFIG" = "development" ]; then
   echo "Creating development users..."
-  FLASK_APP=timeclock.py python -m flask create_dev_users || echo "Creating dev users failed, but continuing..."
-  FLASK_APP=timeclock.py python -m flask create_health_screen_users || echo "Creating health screen users failed, but continuing..."
+  python -m flask create_dev_users || echo "Creating dev users failed, but continuing..."
+  python -m flask create_health_screen_users || echo "Creating health screen users failed, but continuing..."
 fi
 
 # Start application
