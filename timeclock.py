@@ -83,7 +83,6 @@ def setup_roles():
     db.session.add(administrator)
     db.session.commit()
 
-
 @app.cli.command("create_dev_users")
 def create_dev_users():
     """Create users for development."""

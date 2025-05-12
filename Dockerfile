@@ -34,6 +34,7 @@ ENV FLASK_APP=timeclock.py
 ENV PYTHONUNBUFFERED=1
 ENV FLASK_ENV=development
 ENV FLASK_CONFIG=development
+ENV FLASK_DEBUG=1
 ENV DATABASE_URL=postgresql://developer:developer_password@db:5432/timeclock_dev
 
 # Expose port
@@ -41,4 +42,4 @@ EXPOSE 5000
 
 # Run entrypoint and command
 ENTRYPOINT ["/docker-entrypoint.sh"]
-CMD ["gunicorn", "--bind", "0.0.0.0:5000", "wsgi:app"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5000", "--no-debugger", "--reload"] # Allow hot-reloading 
