@@ -9,9 +9,6 @@ RUN apt-get update && apt-get install -y \
     pkg-config \
     python3-dev \
     postgresql-client \
-    iputils-ping \
-    iproute2 \
-    net-tools \
     && rm -rf /var/lib/apt/lists/*
 
 # Copy Pipfile and Pipfile.lock
@@ -43,4 +40,4 @@ EXPOSE 5000
 # Run entrypoint and command
 ENTRYPOINT ["/docker-entrypoint.sh"]
 # Allow hot-reloading with debugger enabled
-CMD ["flask", "run", "--host=0.0.0.0", "--port=5000", "--reload"] 
+CMD ["flask", "run", "--host=0.0.0.0", "--port=5001", "--reload"] 

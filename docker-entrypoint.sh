@@ -1,13 +1,6 @@
 #!/bin/bash
 set -e
 
-# Print out environment for debugging
-echo "Checking environment and connectivity..."
-echo "Host entries:"
-cat /etc/hosts
-echo "Network config:"
-ip addr show
-
 # Wait for database to be ready (with timeout)
 echo "Waiting for PostgreSQL..."
 max_attempts=5
